@@ -44,3 +44,6 @@ cada boton hace la funcionalidad requerida, mostrada de la siquiente forma:
 
   <img width="1131" height="337" alt="image" src="https://github.com/user-attachments/assets/2dbabaa3-d63c-4cc8-97ce-56ab8420595f" />
 
+video:
+https://drive.google.com/file/d/1ZBQ0eZDn7ESCBYSJWp5YQpjb1M5QUH84/view?usp=drivesdk
+
