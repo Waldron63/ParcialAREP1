@@ -78,12 +78,12 @@ public class HttpServer {
                     + "Content-Type: application/json\r\n"
                     + "\r\n"
                     + "{\n"
-                    + "\"status\": \"OK\"\n"
-                    + "\"added\": " + numberString + "\n"
+                    + "\"status\": \"OK\",\n"
+                    + "\"added\": " + numberString + ",\n"
                     + "\"count\": " + numbers.size() + "\n"
                     + "}";
         }catch(Exception e){
-            return errPath();
+            return errNumber();
         }
     }
     
@@ -94,7 +94,7 @@ public class HttpServer {
                 + "Content-Type: application/json\r\n"
                 + "\r\n"
                 + "{\n"
-                + "\"status\": \"OK\"\n"
+                + "\"status\": \"OK\",\n"
                 + "\"values\": " + listString + "\n"
                 + "}";
     }
@@ -105,7 +105,7 @@ public class HttpServer {
                 + "Content-Type: application/json\r\n"
                 + "\r\n"
                 + "{\n"
-                + "\"status\": \"OK\"\n"
+                + "\"status\": \"OK\",\n"
                 + "\"message\": \"list_cleared\"\n"
                 + "}";
     }
@@ -136,9 +136,9 @@ public class HttpServer {
                 + "Content-Type: application/json\r\n"
                 + "\r\n"
                 + "{\n"
-                + "\"status\": \"OK\"\n"
-                + "\"mean\": " + media + "\n"
-                + "\"stddev\": " + desv + "\n"
+                + "\"status\": \"OK\",\n"
+                + "\"mean\": " + media + ",\n"
+                + "\"stddev\": " + desv + ",\n"
                 + "\"count\":" + numbers.size() + "\n"
                 + "}";
         }else{
@@ -151,9 +151,18 @@ public class HttpServer {
                 + "Content-Type: application/json\r\n"
                 + "\r\n"
                 + "{\n"
-                + "\"status\": \"ERR\"\n"
+                + "\"status\": \"ERR\",\n"
                 + "\"error\": \"empty_list\"n\n"
                 + "}";
-               
+    }
+
+    private static String errNumber() {
+        return "HTTP/1.1 400 ERR\r\n"
+                + "Content-Type: application/json\r\n"
+                + "\r\n"
+                + "{\n"
+                + "\"status\": \"ERR\",\n"
+                + "\"error\": \"invalid_number\"n\n"
+                + "}";
     }
 }

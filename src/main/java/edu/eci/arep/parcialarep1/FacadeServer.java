@@ -89,21 +89,21 @@ public class FacadeServer {
 
     + "<h2>list</h2>\n"
     + "<form action=\"/list\">\n"
-        + "<label for=\"list\">Name:</label><br>\n"
+        + "<label for=\"list\">List:</label><br>\n"
         + "<input type=\"button\" id =\"list\" value=\"Submit\" onclick=\"loadlistinteger()\">\n"
     + "</form>\n"
     + "<div id=\"getresplist\"></div>\n"
 
     + "<h2>clear</h2>\n"
     + "<form action=\"/clear\">\n"
-        + "<label for=\"clear\">Name:</label><br>\n"
+        + "<label for=\"clear\">Clear:</label><br>\n"
         + "<input type=\"button\" id=\"clear\" value=\"Submit\" onclick=\"loadclearlist()\">\n"
     + "</form>\n"
     + "<div id=\"getrespclear\"></div>\n"
 
     + "<h2>stats</h2>\n"
     + "<form action=\"/stats\">\n"
-        + "<label for=\"stats\">Name:</label><br>\n"
+        + "<label for=\"stats\">Stats:</label><br>\n"
         + "<input type=\"button\" id=\"stats\" value=\"Submit\" onclick=\"loadstatlist()\">\n"
     + "</form>\n"
     + "<div id=\"getrespstats\"></div>\n"
@@ -113,7 +113,7 @@ public class FacadeServer {
                 + "const xhttp = new XMLHttpRequest();\n"
         + "xhttp.onload = function () {\n"
             + "document.getElementById(\"getrespinteger\").innerHTML =\n"
-                    + "this.responseText;\n"
+                    + "this.responseJson;\n"
         + "}\n"
         + "xhttp.open(\"GET\", \"/cliente/add?x=\" + nameVar);\n"
         + "xhttp.send();\n"
@@ -157,7 +157,7 @@ public class FacadeServer {
     }
     
     public static String errServer(){
-        return "HTTP/1.1 400 ERR\r\n"
+        return "HTTP/1.1 502 ERR\r\n"
                 + "Content-Type: text/html\r\n"
                  + "\r\n"
                     +"<!DOCTYPE html>\n"
@@ -168,7 +168,7 @@ public class FacadeServer {
                         +"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
                     +"</head>\n"
                     +"<body>\n"
-                        +"<h1>URL not found</h1>\n"
+                        +"<h1>backend unreachable</h1>\n"
                     +"</body>\n"
                     +"</html>\n";
     }
