@@ -80,29 +80,29 @@ public class FacadeServer {
                     +"<body>\n"
                     +"<h1>Form with GET</h1>\n"
                     + "<h2>add</h2>\n"
-        + "<form action=\"/add\">\n"
+        + "<form action=\"/cliente\">\n"
             + "<label for=\"add\">add:</label><br>\n"
-            + "<input type=\"text\" id=\"add\" name=\"add\" value=1><br><br>\n"
+            + "<input type=\"text\" id=\"add\" name=\"add\"><br><br>\n"
             + "<input type=\"button\" value=\"Submit\" onclick=\"loadAddInteger()\">\n"
         + "</form>\n"
         + "<div id=\"getrespinteger\"></div>\n"
 
     + "<h2>list</h2>\n"
-    + "<form action=\"/list\">\n"
+    + "<form action=\"/cliente\">\n"
         + "<label for=\"list\">List:</label><br>\n"
         + "<input type=\"button\" id =\"list\" value=\"Submit\" onclick=\"loadlistinteger()\">\n"
     + "</form>\n"
     + "<div id=\"getresplist\"></div>\n"
 
     + "<h2>clear</h2>\n"
-    + "<form action=\"/clear\">\n"
+    + "<form action=\"/cliente\">\n"
         + "<label for=\"clear\">Clear:</label><br>\n"
         + "<input type=\"button\" id=\"clear\" value=\"Submit\" onclick=\"loadclearlist()\">\n"
     + "</form>\n"
     + "<div id=\"getrespclear\"></div>\n"
 
     + "<h2>stats</h2>\n"
-    + "<form action=\"/stats\">\n"
+    + "<form action=\"/cliente\">\n"
         + "<label for=\"stats\">Stats:</label><br>\n"
         + "<input type=\"button\" id=\"stats\" value=\"Submit\" onclick=\"loadstatlist()\">\n"
     + "</form>\n"
@@ -113,7 +113,7 @@ public class FacadeServer {
                 + "const xhttp = new XMLHttpRequest();\n"
         + "xhttp.onload = function () {\n"
             + "document.getElementById(\"getrespinteger\").innerHTML =\n"
-                    + "this.responseJson;\n"
+                    + "this.responseText;\n"
         + "}\n"
         + "xhttp.open(\"GET\", \"/cliente/add?x=\" + nameVar);\n"
         + "xhttp.send();\n"
@@ -157,7 +157,7 @@ public class FacadeServer {
     }
     
     public static String errServer(){
-        return "HTTP/1.1 502 ERR\r\n"
+        return "HTTP/1.1 400 ERR\r\n"
                 + "Content-Type: text/html\r\n"
                  + "\r\n"
                     +"<!DOCTYPE html>\n"
@@ -168,7 +168,7 @@ public class FacadeServer {
                         +"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
                     +"</head>\n"
                     +"<body>\n"
-                        +"<h1>backend unreachable</h1>\n"
+                        +"<h1>URL not found</h1>\n"
                     +"</body>\n"
                     +"</html>\n";
     }
