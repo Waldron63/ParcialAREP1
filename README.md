@@ -27,13 +27,14 @@ cada boton hace la funcionalidad requerida, mostrada de la siquiente forma:
   <img width="377" height="211" alt="image" src="https://github.com/user-attachments/assets/e5cb5cc9-f310-4e57-acef-036fcd5d26e8" />
   <img width="941" height="318" alt="image" src="https://github.com/user-attachments/assets/74b6bd76-caba-492e-a783-bf12d077a540" />
 
-  añadiendo tambien los numeros 1, 3, 65, -5, 0.456
-  <img width="1008" height="610" alt="image" src="https://github.com/user-attachments/assets/70fae5fe-4916-45ad-b1dd-1b3030011243" />
 
 - LIST
 
   <img width="222" height="105" alt="image" src="https://github.com/user-attachments/assets/bf7754d4-cd09-4a08-abc5-30cb7d98623d" />
 
+  añadiendo tambien los numeros 1, 3, 65, -5, 0.456
+  <img width="1008" height="610" alt="image" src="https://github.com/user-attachments/assets/70fae5fe-4916-45ad-b1dd-1b3030011243" />
+  
 - CLEAR
 
   <img width="958" height="308" alt="image" src="https://github.com/user-attachments/assets/b181ffcc-7743-4065-b272-e2779f4f24e9" />
